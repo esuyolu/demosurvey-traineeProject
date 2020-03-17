@@ -73,7 +73,7 @@ public class SurveyController {
     }
 
     @DeleteMapping("survey/{surveyId}")
-    public Map<String, Boolean> deleteCourse(@PathVariable(value = "surveyId") Long surveyId) throws ResourceNotFoundException {
+    public Map<String, Boolean> deleteSurvey(@PathVariable(value = "surveyId") Long surveyId) throws ResourceNotFoundException {
 
         Survey survey = surveyRepository.findById(surveyId).orElseThrow(() -> new ResourceNotFoundException("Survey not found for this id : " + surveyId));
 
